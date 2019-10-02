@@ -7,19 +7,32 @@
     <title>Pokedex 2.0</title>
 </head>
 <body>
-<?php
-echo 'test';
-?>
 <form id="searchContainer" method="get">
-    <input type="text" name="pokeName" placeholder="pokemon" value="">
-    <input type="submit" id="pokeButton">
+    <input type="text" name="pokeID" placeholder="pokemon" value="" label="pokeInput">
+    <input type="submit" id="pokeButton" label="pokeInput">
 </form>
 <?php
-$pokeName = $_GET['pokeName'];
+$pokeID = $_GET['pokeID'];
+$apiURL = 'https://pokeapi.co/api/v2';
 
-$pokeInfo = file_get_contents('https://pokeapi.co/api/v2/pokemon/' . $pokeName);
-var_dump(json_decode($pokeInfo));
+function apiFetch($link) {
+    $json = file_get_contents($link);
+    return json_decode($json, true);
+}
+
+$pokeInfo = apiFetch($apiURL . '/pokemon/' . $pokeID);
+//var_dump($pokeInfo);
+
+$sprite = $pokeInfo[sprites][front_default];
+$name = $pokeInfo[name];
+//echo $pokeInfo[species][url];
+echo $pokeInfo[moves][1][0];
+echo $pokeInfo[moves][1][1];
+
 ?>
+<h1>PHPokedex 1.0</h1>
+<h2><?php echo $name; ?></h2>
+<img src="<?php echo $sprite; ?>" alt="sprite">
 
 </body>.
 </html>
