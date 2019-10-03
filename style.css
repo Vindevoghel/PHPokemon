@@ -1,0 +1,121 @@
+body{
+    background-image: radial-gradient(circle, #BEE1FD, #5AC4FD, #54C3FD, #4AB6FD, #33A3FC);
+    font-family: 'Signika', sans-serif;
+}
+
+#topFiller{
+    height: 50px;
+}
+
+#midSection{
+    background-color: #ED4234;
+    border-radius: 35px;
+}
+#bottomMidSection{
+    background-color: #ED4234;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 25px;
+}
+
+#leftContainer{
+    background-color: grey;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    width: 35%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+#evoContainer{
+    background-color: black;
+    color: limegreen;
+    border-radius: 35px;
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    text-align: center;
+}
+#searchContainer{
+    background-color: none;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#searchBox{
+    background-color: limegreen;
+    color: black;
+    border-color: #ED4234;
+    border-width: 5px;
+    border-radius: 35px;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+}
+#pokeButton{
+    background-color: black;
+    color: yellow;
+    border-radius: 35px;
+    border-color: black;
+    border-width: 5px;
+    height: 50px;
+    margin: 25px;
+}
+
+#rightContainer{
+    background-color: grey;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    width: 35%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+#textArea{
+    background-color: limegreen;
+    color: black;
+    border-radius: 35px;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+}
+#pokeImgContainer{
+    background-color: black;
+    color: limegreen;
+    border-radius: 35px;
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    text-align: center;
+}
+
+#pokemonLogo{
+    background-color: none;
+    display: flex;
+    max-width: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokedex{
+    background-color: none;
+    color: yellow;
+    display: flex;
+    max-width: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#bottomFiller{
+}
