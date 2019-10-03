@@ -117,7 +117,13 @@ $randPrevoMoves = array_rand($prevoMoves, 4);
                         echo $prevoSprite;
                     } ?>
                     >
-                    <h5 id="targetIdNrTwo"><?php echo $prevoID . " " . $prevoType ?></h5>
+                    <h5 id="targetIdNrTwo">
+                        <?php
+                        if ($prevoName == null) {
+                            echo "No Previous Evolution";
+                        } else {
+                            echo $prevoID . " " . $prevoType;
+                        } ?></h5>
                 </div>
 
 
@@ -128,19 +134,45 @@ $randPrevoMoves = array_rand($prevoMoves, 4);
                 <div class="container" id="textArea">
 
                     <div class="container">
-                        <h2 id="targetMoveOne">Move One</h2>
+                        <h2 id="targetMoveOne"><?php
+                            if ($currentMoves[$randMoves[0]] == null) {
+                                echo "";
+                            } else {
+                                echo $currentMoves[$randMoves[0]][move][name];
+                            }
+                            ?></h2>
                     </div>
 
                     <div class="container">
-                        <h2 id="targetMoveTwo">Move Two</h2>
+                        <h2 id="targetMoveTwo"><?php
+                            if ($currentMoves[$randMoves[1]] == null) {
+                                echo "";
+                            } else {
+                                echo $currentMoves[$randMoves[1]][move][name];
+                            }
+                            ?></h2>
                     </div>
 
                     <div class="container">
-                        <h2 id="targetMoveThree">Move Three</h2>
+                        <h2 id="targetMoveThree"><?php
+                            if ($currentMoves[$randMoves[2]] == null) {
+                                echo "";
+                            } else {
+                                echo $currentMoves[$randMoves[2]][move][name];
+                            }
+                            ?>
+                        </h2>
                     </div>
 
                     <div class="container">
-                        <h2 id="targetMoveFour">Move Four</h2>
+                        <h2 id="targetMoveFour"><?php
+                            if ($currentMoves[$randMoves[3]] == null) {
+                                echo "";
+                            } else {
+                                echo $currentMoves[$randMoves[3]][move][name];
+                            }
+                            ?>
+                        </h2>
                     </div>
 
                 </div>
